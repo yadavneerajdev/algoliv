@@ -49,6 +49,7 @@ const SortVisuals = ({ values, sortType }) => {
     setSortedArray([...newArray]); // Set the sorted array for final position animation
     setCurrentIndex(null); // Reset currentIndex after sorting is complete
     setNextIndex(null);    // Clear the nextIndex after sorting
+    setStoreValue(null)
   };
 
   const performBubbleSort = async () => {
@@ -106,11 +107,11 @@ const SortVisuals = ({ values, sortType }) => {
       </div>
 
       {/* Display the current minimum value */}
-      <div className="min-value-container">
+      {sortType === 'selection' && <div className="min-value-container">
         <div className="min-value-box">
           {storeValue !== null ? `Current min value : ${storeValue}` : 'null'}
         </div>
-      </div>
+      </div>}
 
       <button className="sort-button" onClick={performSort}>
         Sort ({sortType === 'selection' ? 'Selection' : 'Bubble'})
