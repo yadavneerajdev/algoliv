@@ -1,0 +1,95 @@
+/* SortVisuals.css */
+
+.sort-visuals {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .array-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .array-box {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    position: relative;
+    transition: transform 0.8s ease-in-out, background-color 0.5s;
+  }
+  
+  .array-box.highlight {
+    background-color: #16962d; /* Highlighting the current and next values */
+  }
+  
+  .arrow {
+    position: absolute;
+    top: -34px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    font-size: 18px;
+    color: #e74c3c;
+  }
+  
+  /* Underline styles for current value and next value */
+  .current-value-line {
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: red; /* Underline color for current element */
+    border-radius: 2px;
+    transition: bottom 0.8s ease-in-out;
+  }
+  
+  .store-value-line {
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: yellow; /* Underline for the stored value (current min) */
+    border-radius: 2px;
+    transition: bottom 0.8s ease-in-out;
+  }
+  
+  .sort-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sort-button:hover {
+    background-color: #27ae60;
+  }
+  
+  .min-value-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .min-value-box {
+    display: inline-block;
+    padding: 10px;
+    background-color: #f1c40f;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
